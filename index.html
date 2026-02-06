@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="ru">
 <head>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a0f14">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>Helpa банк</title>
@@ -653,6 +655,8 @@
     }
   </style>
 </head>
+
+
 
 <body>
   <div class="app">
@@ -2123,6 +2127,12 @@
     ensureAuth();
     renderAll();
   </script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js");
+  }
+</script>
 </body>
 </html>
+
 
